@@ -8,7 +8,7 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
   if (!thoughts.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>No reviews yet</h3>;
   }
 
   return (
@@ -31,7 +31,7 @@ const ThoughtList = ({
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this thought on {thought.createdAt}
+                    Posted review on {thought.createdAt}
                   </span>
                 </>
               )}
@@ -43,7 +43,7 @@ const ThoughtList = ({
               className="btn btn-primary btn-block btn-squared"
               to={`/thoughts/${thought._id}`}
             >
-              Join the discussion on this thought.
+              Comment on review.
             </Link>
           </div>
         ))}
