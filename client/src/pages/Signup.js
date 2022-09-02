@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {Grid, Paper, Typography, TextField, Avatar, Button} from '@mui/material'
+
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -53,7 +53,7 @@ const Signup = () => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your username"
+                  placeholder="Create a Username"
                   name="username"
                   type="text"
                   value={formState.name}
@@ -61,7 +61,7 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Enter Email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -69,19 +69,25 @@ const Signup = () => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder="Minimum Character length 8"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
+                <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                <label class="form-check-label" for="flexCheckDefault">Agree to the Terms and Conditions</label> 
+                </div>
+                <i class="fas fa-inbox"></i>
                 <button
                   className="btn btn-block btn-primary"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
-                  Submit
+                  Create Account
                 </button>
+        
               </form>
             )}
 
