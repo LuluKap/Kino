@@ -10,6 +10,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+  background: #41424D;
 }
 
 /* Sections
@@ -19,6 +20,7 @@ html {
  */
 body {
   margin: 0;
+  
 }
 
 /**
@@ -32,9 +34,10 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
+.m-0 {
   font-size: 2em;
   margin: 0.67em 0;
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* Grouping content
@@ -356,7 +359,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Abel',  'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
@@ -369,7 +372,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Bebas Neue', monospace;
   margin: 0 0 0.5rem;
   line-height: 1.25;
 }
@@ -920,7 +923,8 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background-color: #2d3e50 !important;
+  background: #032b43 !important;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .bg-info {
@@ -936,7 +940,7 @@ a:hover {
 }
 
 .bg-dark {
-  background-color: #1a1a1a !important;
+  background-color: #2B2D42 !important;
 }
 
 .bg-white {
@@ -1012,7 +1016,7 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: #deaf65;
   color: #d9e9e8;
 }
 
@@ -1050,6 +1054,7 @@ a:hover {
 .btn.btn-dark {
   background-color: #1a1a1a;
   color: #d9e9e8;
+  cursor: pointer;
 }
 
 .btn.btn-dark:hover {
