@@ -9,14 +9,13 @@ import Auth from '../utils/auth';
 const Review = () => {
     const {review} = useParams();
 
-    if (loading) {
-        return <div>Loading...</div>;
-
-    }
+    
     return (
-        <div>
-            
-        </div>
+        <main>
+            <div>
+            <h1>Hellow World</h1>
+            </div>
+        </main>
     );
 }
 export default Review;
