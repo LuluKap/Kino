@@ -10,7 +10,7 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
-  background: #41424D;
+  background: #0D0D0D
 }
 
 /* Sections
@@ -38,6 +38,7 @@ main {
   font-size: 2em;
   margin: 0.67em 0;
   font-family: 'Bebas Neue', cursive;
+  color: #8C8C8C;
 }
 
 /* Grouping content
@@ -145,9 +146,7 @@ img {
   border-style: none;
 }
 
-img.logo {
-  height: 10rem;
-}
+
 /* Forms
    ========================================================================== */
 /**
@@ -390,6 +389,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  color: #8C8C8C;
 }
 
 h4 {
@@ -467,6 +467,10 @@ a:hover {
 /* Margin - all sides */
 .m-0 {
   margin: 0 !important;
+}
+
+.m-0:hover {
+  color: #A60A27;
 }
 
 .m-1 {
@@ -905,11 +909,15 @@ a:hover {
 }
 
 .text-light {
-  color: #d9e9e8 !important;
+  color: #8C8C8C!important;
+}
+
+.text-light:hover {
+  color: #A60A27;
 }
 
 .text-dark {
-  color: #1a1a1a !important;
+  color: #8C8C8C !important;
 }
 
 .text-white {
@@ -917,7 +925,7 @@ a:hover {
 }
 
 .text-black {
-  color: #000000 !important;
+  color: #8C8C8C !important;
 }
 
 .text-link {
@@ -926,12 +934,12 @@ a:hover {
 
 /* BACKGROUND UTILS */
 .bg-primary {
-  background: #032b43 !important;
+  background: #0D0D0D!important;
   font-family: 'Bebas Neue', cursive;
 }
 
 .bg-info {
-  background-color: #1bbc9b !important;
+  background-color: #0D0D0D !important;
 }
 
 .bg-danger {
@@ -943,7 +951,7 @@ a:hover {
 }
 
 .bg-dark {
-  background-color: #2B2D42 !important;
+  background-color: #0D0D0D !important;
 }
 
 .bg-white {
@@ -1019,12 +1027,13 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #deaf65;
+  background-color: #595959;
   color: #d9e9e8;
+  cursor: pointer;
 }
 
 .btn.btn-primary:hover {
-  background-color: #57779a;
+  background-color: #A60A27;
 }
 
 .btn.btn-danger {
@@ -1037,21 +1046,22 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
-  color: #ffffff;
+  background-color: #0D0D0D;
+  color: #EDF2F4;
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: #A60A27;
 }
 
 .btn.btn-light {
-  background-color: #d9e9e8;
-  color: #1a1a1a;
+  background-color: #0D0D0D;
+  color: #EDF2F4;
+  cursor: pointer;
 }
 
 .btn.btn-light:hover {
-  background-color: #84b8b4;
+  background-color: #A60A27;
 }
 
 .btn.btn-dark {
@@ -1083,12 +1093,12 @@ a:hover {
 }
 
 .btn.btn-link {
-  background-color: #1b89bc;
+  background-color: #A60A27;
   color: #ffffff;
 }
 
 .btn.btn-link:hover {
-  background-color: #31a9e1;
+  background-color: #A60A27;
 }
 
 .card {

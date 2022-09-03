@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "./header.css";
 
 import Auth from '../../utils/auth';
 
@@ -14,8 +14,9 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">KINO</h1>
-            <img className='logo' src="./img/Kino.svg" alt="logo" />
+          {/* <img className='logo' src="./img/Kino.png" alt="logo" /> */}
+            <h1 className="m-0">KINO </h1>
+            
           </Link>
         </div>
         <div>
