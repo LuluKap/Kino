@@ -48,9 +48,9 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           
           <Header />
-          <div className="container searchbar">
+          {/* <div className="container searchbar">
             <Searchbar />
-          </div>
+          </div> */}
 
           <div className="container">
             <Routes>
