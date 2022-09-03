@@ -15,8 +15,12 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import MovieInfo from './pages/movie.info';
 // import Searchbar from './components/search'
+
+import Review from './pages/Review';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -67,6 +71,10 @@ function App() {
                 path="/signup"
                 element={<Signup />}
               />
+              <Route
+                path="/review"
+                element={<Review />}
+                />
               <Route 
                 path="/me"
                 element={<Profile />}
