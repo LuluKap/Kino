@@ -15,8 +15,12 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Searchbar from './components/search'
+
+import MovieInfo from './pages/movie.info';
+// import Searchbar from './components/search'
+
 import Review from './pages/Review';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -49,9 +53,9 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           
           <Header />
-          <div className="container searchbar">
+          {/* <div className="container searchbar">
             <Searchbar />
-          </div>
+          </div> */}
 
           <div className="container">
             <Routes>
@@ -83,10 +87,13 @@ function App() {
                 path="/thoughts/:thoughtId"
                 element={<SingleThought />}
               />
+              <Route
+              path="/movie.info"
+              element={<MovieInfo/>}
+              />
             </Routes>
           </div>
           <Footer />
-         
         </div>
       </Router>
     </ApolloProvider>

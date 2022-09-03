@@ -358,7 +358,7 @@ html,
 body {
   min-height: 100%;
 }
-
+/* //comment colors  */
 body {
   margin: 0;
   padding: 0;
@@ -366,7 +366,7 @@ body {
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
-  color: #1a1a1a;
+  color: #c21616;
 }
 
 h1,
