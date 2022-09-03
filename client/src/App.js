@@ -15,6 +15,7 @@ import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Searchbar from './components/search'
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -45,7 +46,12 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
+          
           <Header />
+          <div className="container searchbar">
+            <Searchbar />
+          </div>
+
           <div className="container">
             <Routes>
               <Route 
@@ -75,6 +81,7 @@ function App() {
             </Routes>
           </div>
           <Footer />
+         
         </div>
       </Router>
     </ApolloProvider>
