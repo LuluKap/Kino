@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
-
+// import { Rating } from '../components/Rating';
 const Review = () => {
     const {review} = useParams();
 
@@ -30,7 +30,7 @@ const Review = () => {
                             <div class="reviewbox2">
                                 
                                 <div class="col-md"><h1><span id="rateMe2"  class="empty-stars"></span>Rate and Review !</h1>
-                               
+                               {/* <div><Rating /></div> */}
                                 <div class="container-fluid">
                                 <textArea class="reviewtext"placeholder="Write Review"></textArea></div>
                                 </div>
