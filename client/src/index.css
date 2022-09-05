@@ -12,6 +12,18 @@ html {
   /* 2 */
   background: #0D0D0D
 }
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent,#A60A27);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent,#550a18);
+}
 
 /* Sections
    ========================================================================== */
@@ -23,30 +35,16 @@ body {
   
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
+
 main {
   display: block;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-.m-0 {
-  font-size: 2em;
-  margin: 0.67em 0;
-  font-family: 'Bebas Neue', cursive;
-  color: #8C8C8C;
-}
+
 
 /* Grouping content
    ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
+
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -366,7 +364,7 @@ body {
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 16px;
-  color: #c21616;
+  color: #595959;
 }
 
 h1,
@@ -436,7 +434,6 @@ a {
 
 a:hover {
   color: #065b83;
-  text-decoration: underline;
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -468,12 +465,32 @@ a:hover {
 /* Margin - all sides */
 .m-0 {
   margin: 0 !important;
+  font-size: 2em;
+  margin: 0.67em 0;
+  font-family: 'Bebas Neue', cursive;
+  color: #8C8C8C;
 }
 
 .m-0:hover {
   color: #A60A27;
+  transition: ease-in 300ms all;
 }
 
+h1.m-0{
+  transition: ease-in 300ms all;
+  transition-delay: 300ms;
+  transition-duration: 300ms;
+  font-size: 2.5rem;
+}
+
+h1.m-0:hover{
+  color: #A60A27;
+  transition: ease-in 300ms all;
+  letter-spacing: 5px;
+}
+p.m-0{
+  font-size: 1rem;
+}
 .m-1 {
   margin: 0.375rem !important;
 }
@@ -910,11 +927,13 @@ a:hover {
 }
 
 .text-light {
-  color: #8C8C8C!important;
+  color: #8C8C8C;
+  transition: ease-in 300ms all;
 }
 
 .text-light:hover {
   color: #A60A27;
+  cursor: pointer;
 }
 
 .text-dark {
@@ -1019,6 +1038,7 @@ a:hover {
 .btn.btn-lg {
   font-size: 1.25rem;
   padding: 0.8rem 1.4rem;
+  border-radius: 20px;
 }
 
 .btn.btn-block {
@@ -1031,10 +1051,12 @@ a:hover {
   background-color: #595959;
   color: #d9e9e8;
   cursor: pointer;
+  transition: ease-in 300ms all;
 }
 
 .btn.btn-primary:hover {
   background-color: #A60A27;
+  border-radius: 20px;
 }
 
 .btn.btn-danger {
@@ -1049,6 +1071,8 @@ a:hover {
 .btn.btn-info {
   background-color: #0D0D0D;
   color: #EDF2F4;
+  transition: ease-in 300ms all;
+  border-radius: 20px;
 }
 
 .btn.btn-info:hover {
@@ -1072,7 +1096,7 @@ a:hover {
 }
 
 .btn.btn-dark:hover {
-  background-color: #5f5f5f;
+  background-color: #A60A27;
 }
 
 .btn.btn-white {

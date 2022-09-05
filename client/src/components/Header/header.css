@@ -1,7 +1,14 @@
-/* img.logo {
-    transform: scale(10);
-    height: 10px;
-    margin-right: 2rem;
-    
+.logo {
+    /* translate:100rem ;
+    margin-left: 10rem; */
+}
 
-} */
+input.input{
+    -webkit-transition: all 300ms ease-in-out;
+}
+
+.input:focus {
+    background-color: rgb(226, 225, 225);
+    width: 190px;
+
+}
