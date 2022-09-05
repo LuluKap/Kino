@@ -21,6 +21,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/material": "^5.10.3",
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
     "mdb-react-ui-kit": "^4.2.0",
     "mdb-ui-kit": "^5.0.0"
   }
