@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigate, useParams, Link } from 'react-router-dom';
+import { Navigate, useParams, Link,} from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -14,31 +14,54 @@ const Review = () => {
         <main>
             <body>
                 <ul class="mininav">
-                   <ul>Link to name</ul>
-                   <ul>See More like this <i class="fas fa-arrow-right"></i></ul>
-                </ul>
-                <div class="row">
-                <div class="col-md-8 container-lg" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </div>
-
-                <div class="container-sm">
-                    <div>
-                        <h5>Movie title</h5>
+                   <ul><h1 clas="Title">Title</h1></ul>
+                   {/* <ul>See More like this <i class="fas fa-arrow-right"></i></ul> */}
+                </ul>     
+               
+               <div class="row">
+                    <div class="container">
+                        <div class="container-sm">
+                        <div class="pb-3"><img src="Scarfacee.png"></img></div>
+                        </div>
+                        <div class="row">
+                            <div class="reviewbox">
+                                <div class="col-sm"><h1 class="redbg">What to Know</h1><p>Description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print.</p></div>
+                            </div>
+                            <div class="reviewbox2">
+                                
+                                <div class="col-md"><h1><span id="rateMe2"  class="empty-stars"></span>Rate and Review !</h1>
+                               
+                                <div class="container-fluid">
+                                <textArea class="reviewtext"placeholder="Write Review"></textArea></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                onic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <div class="col"><h4>What Others Say</h4>
+                    <div class="seedreviews">
+                        <div class="otherrstyle">
+                        <section class="first">
+                            <h6>Name</h6>
+                        </section>
 
-                </div>
-                
+                        <section class="second">
+                            <h6>Name</h6>
+                        </section>
+                        <section class="third">
+                            <h6>Name</h6>
+                        </section>
 
+                    </div>
+                    </div>
+                    
+                    </div>
                 </div>
-                <div class="container-md">
-                onic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                <div class="reviewlike">
+                <h1><i class="fas fa-heart"></i></h1>
                 </div>
-
-                <i class="fas fa-hand-holding-heart"> Like this Movie</i>
               
             </body>
+           
         </main>
     );
 }
