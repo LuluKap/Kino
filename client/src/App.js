@@ -17,7 +17,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import MovieInfo from './pages/movie.info';
-import Search from './components/Search'
+import Search from './components/search'
 
 
 import Review from './pages/Review';
