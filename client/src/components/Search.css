@@ -1,0 +1,12 @@
+ /* search */
+
+body{
+    background: #0D0D0D;
+    color: #8C8C8C;
+    
+  }
+
+  .film-search > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }

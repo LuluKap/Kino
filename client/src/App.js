@@ -17,7 +17,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import MovieInfo from './pages/movie.info';
-// import Searchbar from './components/search'
+import Search from './components/Search'
+
 
 import Review from './pages/Review';
 
@@ -48,14 +49,12 @@ const client = new ApolloClient({
 
 function App() {
   return (
+
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           
           <Header />
-          {/* <div className="container searchbar">
-            <Searchbar />
-          </div> */}
 
           <div className="container">
             <Routes>
@@ -93,6 +92,7 @@ function App() {
               />
             </Routes>
           </div>
+          <Search />
           <Footer />
         </div>
       </Router>

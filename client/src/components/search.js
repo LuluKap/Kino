@@ -1,67 +1,57 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import './Search.css';
 
-function Searchbar() {
+const SearchBox = (props) => {
+  const [search, setSearch] = useState("");
+  return (
+    <div className="col col-sm-4">
+      <input className="form-control" placeholder="Search a Title..." value={props.value} onChange={(event) => props.setSearchInput(event.target.value)} />
+      </div>
+  );
+};
 
-  const [endPoint, setEndPoints] = useState('')
+const Search = () => {
+  const [films, setFilms] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
-  const [container, setContainer] = useState([])
+const getFilmRequest = async (searchInput) => {
+  const url = `http://www.omdbapi.com/?s=${searchInput}&apikey=f52d7e1e`;
 
-  const [finalPoint, setFinalPoint] = useState('');
-    
-useEffect(() =>{
-  fetchMe()
-},[finalPoint])
+  const response = await fetch(url);
+  const responseJson = await response.json();
 
-  const fetchMe = () => {
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'fb165f2f83msh3819e46f1f866c9p199f40jsne52d7734edf2',
-      'X-RapidAPI-Host': 'unogs-unogs-v1.p.rapidapi.com'
-    }
+  if(responseJson.Search) {
+  setFilms(responseJson.Search);
+  }
+};
+
+useEffect(() => {
+  getFilmRequest(searchInput);
+}, [searchInput]);
+
+const FilmList = (props) => {
+  return (
+      <>
+      {props.films.map((film, index) => (
+      <div className="d-flex justify-content-start m-3">
+          <img src={film.Poster} alt="film" />
+      </div>
+      ))}
+      </>
+  );
   };
 
-  fetch(`https://unogs-unogs-v1.p.rapidapi.com/search/titles?order_by=title_asc&title=+${endPoint}`, options)
-    .then(response => {
-      return response.json();
-    })
-    .then(data => {
-      setContainer(data.results)
-    })
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-  }
-
-const onChangeHandler = (e) => {
-  setEndPoints(e.target.value)
-}
-const submitHandler = e => {
-  e.preventDefault()
-  setFinalPoint(endPoint)
-}
-
-  return (
-    <div>
-      <div className="control"> 
-      <form onSubmit={submitHandler}>
-        <input
-          className="input"
-          type="text" value={endPoint} onChange={onChangeHandler} placeholder="Search your movies"/>
-          <button type='submit'>submit</button>
-          </form>
-{/* <div className="element">
-          {container.map((item,index) => {
-            return(
-              <div key={index} className='element-div'> 
-              <img src={item.img} alt="" />
-              <p>{item.title}</p>
-              </div>
-            )
-          })}
-          </div> */}
+return (
+  <div className=' film-search'>
+    <SearchBox searchInput={searchInput} setSearchInput={setSearchInput} />
+    <div className='row'>
       </div>
+    <div className="row">
+    <FilmList films={films} />
     </div>
-  );
-}
+  </div>
+);
+};
 
-export default Searchbar;
+export default Search;
