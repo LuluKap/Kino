@@ -5,11 +5,7 @@ body{
     color: #8C8C8C;
     
   }
-  .film-search > .row {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
+ 
   main {
     display: block;
   }
@@ -66,11 +62,7 @@ body{
    */
   abbr[title] {
     border-bottom: none;
-    /* 1 */
-    text-decoration: underline;
-    /* 2 */
-    text-decoration: underline dotted;
-    /* 2 */
+
   }
   
   /**
@@ -420,7 +412,6 @@ body{
   
   a:hover {
     color: #065b83;
-    text-decoration: underline;
   }
   
   /* HEIGHT / WIDTH UTILS */
