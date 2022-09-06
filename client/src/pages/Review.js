@@ -32,8 +32,7 @@ const Review = () => {
                                 
                                 <div class="col-md"><h1><span id="rateMe2"  class="empty-stars"></span>Rate and Review !</h1>
                                <div><StarRating /></div>
-                                <div class="container-fluid">
-                                <textArea class="reviewtext"placeholder="Write Review"></textArea></div>
+                                
                                 </div>
                             </div>
                         </div>
@@ -42,14 +41,25 @@ const Review = () => {
                     <div class="seedreviews">
                         <div class="otherrstyle">
                         <section class="first">
-                            <h6>Name</h6>
+                            <div class="container-xl">
+                                <h6 class="reviewname">Name</h6>
+                                <p4>This movie was Amazing!!</p4>
+                            </div>
                         </section>
-
+                        
                         <section class="second">
-                            <h6>Name</h6>
+                        <div class="container-xl">
+                                <h6 class="reviewname">Name</h6>
+                                <p4>Attack on Titan is Horribe</p4>
+                            </div>
+                          
                         </section>
                         <section class="third">
-                            <h6>Name</h6>
+                        <div class="container-xl">
+                                <h6 class="reviewname">Name</h6>
+                                <p4>This movie was Amazing!!</p4>
+                            </div>
+                          
                         </section>
 
                     </div>
