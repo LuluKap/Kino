@@ -59,8 +59,12 @@ function App() {
 
           <div className="container">
             <Routes>
-              <Route 
+              <Route
                 path="/"
+                element={<Search />}
+              />
+              <Route 
+                path="/home"
                 element={<Home />}
               />
               <Route 
@@ -70,10 +74,6 @@ function App() {
               <Route 
                 path="/signup"
                 element={<Signup />}
-              />
-              <Route
-                path="/search"
-                element={<Search />}
               />
               <Route
                 path="/review"

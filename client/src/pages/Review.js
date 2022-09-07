@@ -13,7 +13,7 @@ const Review = (props) => {
 
   useEffect(() => {
     Axios.get(
-      `https://www.omdbapi.com/?i=${selectedMovie}&apikey=f52d7e1e`,
+      `https://www.omdbapi.com/?i=tt1457767&apikey=f52d7e1e`,
     ).then((response) => setMovieInfo(response.data));
   }, [selectedMovie]);
    
