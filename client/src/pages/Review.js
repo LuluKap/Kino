@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ThoughtForm from '../components/ThoughtForm/index'
 import { QUERY_THOUGHTS } from '../utils/queries';
 import { useQuery } from '@apollo/client';
+import { useLocation } from 'react-router-dom'
 
 
 
@@ -13,6 +14,9 @@ import Auth from '../utils/auth';
 import ThoughtList from "../components/ThoughtList";
 
 const Review = (props) => {
+    const location = useLocation()
+    console.log(location.state.movie)
+    const movieData = location.state.movie
     const [movieInfo, setMovieInfo] = useState();
   const { selectedMovie } = props;
 
@@ -29,20 +33,20 @@ const Review = (props) => {
         <main>
             <body>
                 <ul class="mininav">
-                   <ul><h1 clas="Title">{movieInfo?.Title}</h1></ul>
+                   <ul><h1 clas="Title">{movieData.Title}</h1></ul>
                    {/* <ul>See More like this <i class="fas fa-arrow-right"></i></ul> */}
                 </ul>     
                
                <div class="row">
                     <div class="container">
                         <div class="container-sm">
-                        <div class="pb-3"><img src={movieInfo?.Poster} alt={movieInfo?.Title}></img></div>
+                        <div class="pb-3"><img src={movieData.Poster} alt={movieInfo?.Title}></img></div>
                         </div>
                         <div class="row">
                             <div class="reviewbox">
                                 <div class="col-sm"><h1 class="redbg">Details</h1>Plot:<span> {movieInfo?.Plot} </span>  
-                                <br></br>Genre: <span>{movieInfo?.Genre}</span> 
-                                <br></br> Rated: <span>{movieInfo?.Rated}</span>
+                                <br></br>Genre: <span>{movieData.Type}</span> 
+                                <br></br> Rated: <span>{movieData.Rated}</span>
                                 <br></br>Languages: <span>{movieInfo?.Language}</span></div>
                             </div>
                             <div class="reviewbox2">

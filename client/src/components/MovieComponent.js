@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom';
+import Review from "../pages/Review";
 
 
 const MovieContainer = styled.div`
@@ -48,13 +49,15 @@ const MovieComponent = (props) => {
    
     navigate('/Review');
   };
+  const movie = props.movie
 
   return (
     <MovieContainer
     
-       onClick={() => {navigate("/Review")
-         props.onMovieSelect(imdbID);
-         window.scrollTo({ top: 0, behavior: "smooth" });
+       onClick={() => {navigate("/Review",{state:{movie}})
+      //  { Review: [props.movie, ...Review] }
+
+        
        }}
     >
       <CoverImage src={Poster} alt={Title} />
