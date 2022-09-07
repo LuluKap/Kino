@@ -34,7 +34,7 @@ const MovieName = styled.span`
 const MovieInfo = styled.span`
   font-size: 16px;
   font-weight: 500;
-  color: black;
+  color: white;
   overflow: hidden;
   margin: 4px 0;
   text-transform: capitalize;
