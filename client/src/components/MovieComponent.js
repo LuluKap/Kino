@@ -16,7 +16,7 @@ const CoverImage = styled.img`
 const MovieName = styled.span`
   font-size: 18px;
   font-weight: 600;
-  color: black;
+  color: white;
   margin: 15px 0;
   white-space: nowrap;
   overflow: hidden;
@@ -30,7 +30,7 @@ const InfoColumn = styled.div`
 const MovieInfo = styled.span`
   font-size: 16px;
   font-weight: 500;
-  color: black;
+  color: white;
   white-space: nowrap;
   overflow: hidden;
   text-transform: capitalize;
