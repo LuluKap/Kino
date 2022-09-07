@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import styled from "styled-components";
+import ThoughtForm from '../components/ThoughtForm/index'
+import { QUERY_THOUGHTS } from '../utils/queries';
+import { useQuery } from '@apollo/client';
+
 
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import StarRating from '../components/Rating/Rating';
 import Auth from '../utils/auth';
+import ThoughtList from "../components/ThoughtList";
 
 const Review = (props) => {
     const [movieInfo, setMovieInfo] = useState();
@@ -17,7 +22,8 @@ const Review = (props) => {
     ).then((response) => setMovieInfo(response.data));
   }, [selectedMovie]);
    
-
+  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const thoughts = data?.thoughts || [];
 
     return (
         <main>
@@ -43,6 +49,7 @@ const Review = (props) => {
                                 
                                 <div class="col-md"><h1><span id="rateMe2"  class="empty-stars"></span>Rate and Review !</h1>
                                <div><StarRating /></div>
+                               <div><ThoughtForm /></div>
                                 
                                 </div>
                             </div>
@@ -67,8 +74,11 @@ const Review = (props) => {
                         </section>
                         <section class="third">
                         <div class="container-xl">
-                                <h6 class="reviewname">Kino</h6>
-                                <p4>Julian has bad taste!</p4>
+                            <div><ThoughtList 
+                             thoughts={thoughts}
+                             /></div>
+                                {/* <h6 class="reviewname">Kino</h6>
+                                <p4>Julian has bad taste!</p4> */}
                             </div>
                           
                         </section>

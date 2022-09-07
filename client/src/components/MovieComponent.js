@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Routes, Route, useNavigate } from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 const MovieContainer = styled.div`
