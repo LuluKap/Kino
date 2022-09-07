@@ -20,12 +20,12 @@ const Header = () => {
           </Link>
         </div>
         <div className="control"> 
-      <form >
+      {/* <form >
         <input
           className="input"
           type="text"  placeholder="Search your movies"/>
           <button type='submit'>submit</button>
-          </form>
+          </form> */}
           </div>
         <div>
           {Auth.loggedIn() ? (

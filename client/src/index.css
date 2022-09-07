@@ -310,7 +310,7 @@ p {
   font-size: 1.1rem;
   margin: 0 0 1rem;
   line-height: 1.5;
-  color: #000000;
+  color: #8C8C8C;
 }
 
 ul,
@@ -961,6 +961,7 @@ footer.w-100.mt-auto.bg-secondary.p-4{
   color: #d9e9e8;
   cursor: pointer;
   transition: ease-in 300ms all;
+  background-color: #0D0D0D;
 }
 
 .btn.btn-primary:hover {
