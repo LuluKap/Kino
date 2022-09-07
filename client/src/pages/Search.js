@@ -17,6 +17,7 @@ const Searchbox = styled.div`
     border-radius: 5px;
     width: 50%;
     background-color: white;
+    border: solid white;
 `;
 const SearchInput = styled.input`
     color: black;
