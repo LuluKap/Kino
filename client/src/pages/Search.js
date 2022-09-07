@@ -69,7 +69,7 @@ function Search(){
                     movieList.map((movie, index) => (
                         <MovieComponent movie={movie} key={index} onMovieSelect={onMovieSelect}/>
                 ))) : (
-                   <h2>No Titles Found</h2>
+                   <h2>You know your opinion is right. Search a movie to review</h2>
                 )}    
             </MovieListContainer>
         </Container>
