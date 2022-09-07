@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Routes, Route, useNavigate } from 'react-router-dom'
+
 
 const MovieContainer = styled.div`
   display: flex;
@@ -39,12 +41,20 @@ const MovieInfo = styled.span`
 const MovieComponent = (props) => {
   const { Title, Year, imdbID, Type, Poster } = props.movie;
 
+  const navigate = useNavigate();
+
+  const navigateToReview = () => {
+   
+    navigate('/Review');
+  };
+
   return (
     <MovieContainer
-      onClick={() => {
-        props.onMovieSelect(imdbID);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }}
+    
+       onClick={() => {navigate("/Review")
+         props.onMovieSelect(imdbID);
+         window.scrollTo({ top: 0, behavior: "smooth" });
+       }}
     >
       <CoverImage src={Poster} alt={Title} />
       <MovieName>{Title}</MovieName>

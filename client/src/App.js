@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 import Search from './pages/Search';
 
 import MovieInfo from './pages/movie.info';
-import Searchbar from './components/searchbar'
+// import Searchbar from './components/searchbar'
 
 
 import Review from './pages/Review';
